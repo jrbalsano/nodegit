@@ -19,15 +19,16 @@ init:
 # what combinations to test
 environment:
   matrix:
-    fast_finish: true
-    allow_failures:
-      - nodejs_version: "0.10"
-      - nodejs_version: "1.4.3"
     # Node.js
     - nodejs_version: "0.10"
     - nodejs_version: "0.12"
     # io.js
     - nodejs_version: "1.4.3"
+
+    fast_finish: true
+    allow_failures:
+      - nodejs_version: "0.10"
+      - nodejs_version: "1.4.3"
 
 # Get the latest stable version of Node 0.STABLE.latest
 install:

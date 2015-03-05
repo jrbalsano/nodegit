@@ -10,10 +10,6 @@ env:
       - node_js "0.10"
       - node_js "1.4.3"
 before_install:
-  - git clone https://github.com/creationix/nvm.git ./.nvm
-  - source ./.nvm/nvm.sh
-  - nvm install $NODE_VERSION
-  - nvm use $NODE_VERSION
   - if [ $TRAVIS_OS_NAME == "linux" ]; then
       sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test;
       sudo apt-get -qq update;
